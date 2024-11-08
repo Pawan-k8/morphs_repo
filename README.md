@@ -176,13 +176,13 @@ Verify that maximum character length is enforced.
 Verify that the field allows copying the billing address if applicable.
 
 21. Shipping Country
-Verify that the field accepts standard valid country
-Verify that an error shows if no country is selected 
+Verify that the field accepts standard valid country ,
+Verify that an error shows if no country is selected .
 
 22. Shipping Pincode
 Verify that the field accepts only numeric pincode formats.
 Verify that invalid formats trigger an error message.
-Verify that an error shows if no pincode selected
+Verify that an error shows if no pincode selected.
 
 23. Submit Button
 Verify that the button is disabled until all required fields are correctly filled.
