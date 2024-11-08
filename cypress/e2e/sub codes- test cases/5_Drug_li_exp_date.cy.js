@@ -1,7 +1,7 @@
 ///<reference types = "cypress"/> 
 
 
-it('case 1  - Drug_Li_date',function(){
+it('case 1  - Drug_Li_date -Verify that only valid dates in the future can be selected.',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -11,7 +11,7 @@ cy.get("div[class='p-4']").contains('15').click()
 });
 
 
-it('case 2 - Drug_Li_date',function(){
+it('case 2 - Drug_Li_date -Verify that an empty field triggers an error',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

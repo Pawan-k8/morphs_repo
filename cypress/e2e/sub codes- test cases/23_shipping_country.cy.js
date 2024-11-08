@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - shipping country',function(){
+it('case 1  - shipping country -accepts standard valid country',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - Mobile number',function(){
+it('case 1  - Mobile number -accepts only numeric input',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -10,7 +10,7 @@ it('case 1  - Mobile number',function(){
     cy.get('.bg-submit-button').click()
     });
 
-it('case 2  - Mobile number',function(){
+it('case 2  - Mobile number -an invalid length triggers an error message',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -19,7 +19,7 @@ it('case 2  - Mobile number',function(){
     cy.get("input[id='point_of_contact.0.phone_number']").type('a')
     cy.get('.bg-submit-button').click()
     });
-it('case 3 - Mobile number',function(){
+it('case 3 - Mobile number-field does not accept special characters',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

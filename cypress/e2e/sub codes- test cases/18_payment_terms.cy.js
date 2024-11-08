@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - Payment terms',function(){
+it('case 1  - Payment terms - dropdown allows selection',function(){
 cy.visit('https://morphs.in/sales/customers')
 //enter the registration sheet
 cy.get('.bg-submit-button').click()
@@ -11,7 +11,7 @@ cy.get('select').select('NET 60')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 2 - Payment term',function(){
+it('case 2 - Payment term-error is shown for no option',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

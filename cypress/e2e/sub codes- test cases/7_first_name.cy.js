@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - first name',function(){
+it('case 1  - first name-field accepts alphabetic input only',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -9,7 +9,7 @@ cy.get("input[id='point_of_contact.0.first_name']").type('Ramesh@_')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 2  - first name',function(){
+it('case 2  - first name-the fields allow hyphens and spaces within names',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -18,7 +18,7 @@ cy.get("input[id='point_of_contact.0.first_name']").type('Ramesh _')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 3  - first name',function(){
+it('case 3  - first name -minimum character lengths are enforced',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -27,7 +27,7 @@ cy.get("input[id='point_of_contact.0.first_name']").type(' ')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 4  - first name',function(){
+it('case 4  - first name -maximum character lengths are enforced',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -36,7 +36,7 @@ cy.get("input[id='point_of_contact.0.first_name']").type('qqqqqqqqqqqqqqqqqqqqqq
 cy.get('.bg-submit-button').click()
 });
 
-it('case 5  - first name',function(){
+it('case 5  - first name - fields do not accept numeric characters',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -45,7 +45,7 @@ cy.get("input[id='point_of_contact.0.first_name']").type(12257965854156/8*9/8554
 cy.get('.bg-submit-button').click()
 });
 
-it('case 6  - first name',function(){
+it('case 6  - first name - empty field triggers an error',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

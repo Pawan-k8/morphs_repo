@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - GST type',function(){
+it('case 1  - GST type -dropdown allows selection',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -10,7 +10,7 @@ it('case 1  - GST type',function(){
     cy.get('.bg-submit-button').click()
     });
 
-it('case 2  - GST type',function(){
+it('case 2  - GST type-an error is shown if no option',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

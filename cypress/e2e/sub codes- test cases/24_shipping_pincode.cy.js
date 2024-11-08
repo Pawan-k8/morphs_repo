@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - shipping pincode',function(){
+it('case 1  - shipping pincode -only numeric pincode format',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -10,7 +10,7 @@ cy.get('#shipping_pincode').type(102105)
 cy.get('.bg-submit-button').click()
 });
 
-it('case 2 - shipping pincode',function(){
+it('case 2 - shipping pincode -invalid formats trigger an error',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -20,7 +20,7 @@ cy.get('#shipping_pincode').type('AREC77')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 3 - shipping pincode',function(){
+it('case 3 - shipping pincode - error shows if no pincode selected',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

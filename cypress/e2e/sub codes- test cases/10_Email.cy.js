@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - Email address',function(){
+it('case 1  - Email address - only valid email format',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -9,7 +9,7 @@ cy.get("input[id='point_of_contact.0.email']").type('anahithagmail.do')
 //cy.get('.bg-submit-button').click()
 });
 
-it('case 2  - Email address',function(){
+it('case 2  - Email address -invalid email format',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -19,7 +19,7 @@ cy.get("input[id='point_of_contact.0.email']").type('anahithagmaildo')
 });
 
 
-it('case 3  - Email address',function(){
+it('case 3  - Email address - does not accept spaces within the email address',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -28,7 +28,7 @@ cy.get("input[id='point_of_contact.0.email']").type('anahitha  gmaildo')
 //cy.get('.bg-submit-button').click()
 });
 
-it('case 4  - Email address',function(){
+it('case 4  - Email address - the maximum character limit',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

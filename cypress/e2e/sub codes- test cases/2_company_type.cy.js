@@ -1,5 +1,5 @@
 ///<reference types = "cypress"/> 
-it('case 1 - Type of Company',function(){
+it("case 1 - Type of Company -Verify that the field allows selection between 'Individual' and 'Business",function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -8,7 +8,7 @@ it('case 1 - Type of Company',function(){
 
 
 });
-it('case 2 - Type of Company',function(){
+it('case 2 - Type of Company - Verify that only one option can be selected at a time',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -17,7 +17,7 @@ it('case 2 - Type of Company',function(){
     cy.get('select').select('INDIVIDUAL')
 
 });
-it('case 3 - Type of Company',function(){
+it('case 3 - Type of Company-Verify that an error is shown if neither option is selected',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

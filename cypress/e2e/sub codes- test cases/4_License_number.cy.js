@@ -1,5 +1,5 @@
 ///<reference types = "cypress"/> 
-it('case 1  - Drug_Li_No',function(){
+it('case 1  - Drug_Li_No -Verify that the field accepts alphanumeric license numbers',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -8,7 +8,7 @@ cy.get('#license_no').type('ASTinMA471n{enter}')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 2  - Drug_Li_No',function(){
+it('case 2  - Drug_Li_No -Verify that the field enforces a minimum and maximum character length',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -17,7 +17,7 @@ cy.get('#license_no').type('ASTinMA471n__2@Weewtqgvdjhbgfkjnxkhcvvjnjklcxvbgxjbv
 cy.get('.bg-submit-button').click()
 });
 
-it('case 3  - Drug_Li_No',function(){
+it('case 3  - Drug_Li_No - Verify that an empty license number triggers an error',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

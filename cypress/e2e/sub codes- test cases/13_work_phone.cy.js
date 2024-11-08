@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - work phone',function(){
+it('case 1  - work phone-field allows inclusion of country codes',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -10,7 +10,7 @@ it('case 1  - work phone',function(){
     cy.get('.bg-submit-button').click()
     });
 
-it('case 2  - work phone',function(){
+it('case 2  - work phone-only valid formats trigger a pass',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

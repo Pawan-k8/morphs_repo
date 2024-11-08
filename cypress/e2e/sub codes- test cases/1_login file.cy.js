@@ -6,7 +6,7 @@
 ))*/
 //test 1// open a web page
 (
-    it('case 1 - mail is incorrect ',function(){
+    it('case 1 - login- mail is incorrect ',function(){
         cy.visit('https://morphs.in/')
     
       // mail is incorrect
@@ -17,7 +17,7 @@
     );
     
 (
-    it('case 2 -password is incorrect',function(){
+    it('case 2 -login-password is incorrect',function(){
         cy.visit('https://morphs.in/')
         // password is incorrect
         cy.get('#email').type('test@gmail.com{enter}')
@@ -27,7 +27,7 @@
     );
 
 (
-    it('case 3 - both are incorrect',function(){
+    it('case 3 - login-both are incorrect',function(){
         cy.visit('https://morphs.in/')
         // both are incorrect
         cy.get('#email').type('test2@gmail.com{enter}')
@@ -38,7 +38,7 @@
         
 
 (
-    it('case 4 - both are correct',function(){
+    it('case 4 - login-both are correct',function(){
         cy.visit('https://morphs.in/')
         cy.get('#email').type('test@gmail.com{enter}')
         cy.get('#password').type('test{enter}')

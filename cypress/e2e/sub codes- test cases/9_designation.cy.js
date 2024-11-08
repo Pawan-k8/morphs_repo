@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - designation',function(){
+it('case 1  - designation-field accepts alphabetic input only',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -9,7 +9,7 @@ cy.get("input[id='point_of_contact.0.designation']").type('chairman of the group
 cy.get('.bg-submit-button').click()
 });
 
-it('case 2  - designation',function(){
+it('case 2  - designation -maximum character limit',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

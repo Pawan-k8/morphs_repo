@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - Submit button',function(){
+it('case 1  - Submit button -button is disabled until all fields are filled',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -9,7 +9,7 @@ it('case 1  - Submit button',function(){
 cy.get('.bg-submit-button').click()
 });
 
-it('case 2 - Submit button',function(){
+it('case 2 - Submit button -clicking 'Submit' with errors shows relevant message',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -20,7 +20,7 @@ cy.get('body > div > div > div.flex.flex-col.w-full > main > div > div.text-card
 
 });
 
-it('case 3  - Submit button',function(){
+it("case 3  - Submit button - clicking 'Submit' with valid data",function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - GST number',function(){
+it('case 1  - GST number- field accepts alphanumeric GST number',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -9,7 +9,7 @@ it('case 1  - GST number',function(){
     cy.get('.bg-submit-button').click()
     });
 
-it('case 2 - GST number',function(){
+it('case 2 - GST number-invalid formats triggers error',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -18,7 +18,7 @@ it('case 2 - GST number',function(){
     cy.get('.bg-submit-button').click()
     });
 
-it('case 3 - GST number',function(){
+it('case 3 - GST number-the field accepts 15-character GST numbers',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -27,7 +27,7 @@ it('case 3 - GST number',function(){
     cy.get('.bg-submit-button').click()
     });
 
-it('case 4 - GST number',function(){
+it('case 4 - GST number - does not accept special characters',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

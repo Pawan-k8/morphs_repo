@@ -1,7 +1,7 @@
 ///<reference types = "cypress"/> 
 
 
-it('case 1  - salutations',function(){
+it("case 1  - salutations -allows selection from options like 'Mr.', 'Ms.', etc",function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -10,7 +10,7 @@ cy.get(':nth-child(1) > .grid > :nth-child(1) > :nth-child(1) > .w-full.max-w-sm
 cy.contains("button[aria-controls='radix-:ru:'] svg",'Mr')
 });
 
-it('case 2  - salutations',function(){
+it('case 2  - salutations -Verify that an error is shown if no option is selected',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()

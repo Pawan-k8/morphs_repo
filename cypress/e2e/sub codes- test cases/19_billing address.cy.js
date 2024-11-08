@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/> 
 
-it('case 1  - billing address',function(){
+it('case 1  - billing address -accepts standard alphanumeric addresses',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -10,7 +10,7 @@ cy.get("textarea[name='billing_address']").type('21,baker$ street')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 2  - billing address',function(){
+it('case 2  - billing address -maximum character length',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
@@ -20,12 +20,12 @@ cy.get("textarea[name='billing_address']").type('21,baker$ street')
 cy.get('.bg-submit-button').click()
 });
 
-it('case 3  - billing address',function(){
+it('case 3  - billing address - empty fields trigger errors',function(){
     cy.visit('https://morphs.in/sales/customers')
     //enter the registration sheet
     cy.get('.bg-submit-button').click()
 
-//case 3 - Verify that maximum character length is enforced
+//case 3 - Verify that empty fields trigger errors
 cy.get("textarea[name='billing_address']").type('')
 cy.get('.bg-submit-button').click()
 cy.get('body > div > div > div.flex.flex-col.w-full > main > div > div.text-card-foreground.w-full.max-w-4xl.mx-auto.bg-form.border-2.border-white.shadow-md.rounded-xl.overflow-hidden > form > div:nth-child(1) > div > div:nth-child(1) > div > span > div > svg').should('be.visible')
