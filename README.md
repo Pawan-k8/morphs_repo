@@ -188,3 +188,10 @@ Verify that an error shows if no pincode selected.
 Verify that the button is disabled until all required fields are correctly filled.
 Verify that clicking "Submit" with errors shows relevant messages for correction.
 Verify that clicking "Submit" with valid data saves the information successfully.
+
+**#Summary**
+
+the project aims to provide a robust and individual testing framework for each parameter in the customer information form
+
+By automating tests for each form field, it ensures data accuracy, usability, 
+and compliance with business rules, helping teams quickly identify and resolve potential issues
