@@ -69,6 +69,12 @@ Localization and internationalization for address and phone formats
 
    npx cypress open
 
+   OR
+   
+2. run run_test.js script in terminal
+
+   node cypress/support/run_test.js
+
 **#Test cases**
 
 all the test cases are mentioned below:
